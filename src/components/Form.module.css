@@ -1,0 +1,32 @@
+.divstyle{
+    display:flex;
+    justify-content:center;
+    padding: auto;
+}
+
+.submitBtn{
+    color:rgb(241, 250, 241);
+    font-size: 1.9rem ;
+    background-color: rgb(12, 127, 204);
+    width: 3rem;
+    border-radius: 5px;
+    margin:0.5rem;
+}
+
+.inputs{
+    font-size:1.5rem ;
+    width: 15rem;
+    height:1.9rem;
+    border-radius: 10px;
+    padding: 0.5rem;
+    outline:none
+}
+
+.option{
+    width: 10rem;
+    height:2rem;
+    margin-left: 5rem;
+    background-color: rgb(197, 198, 201);
+    font-size:1.2rem ;
+    font-family: cursive;
+}

@@ -1,0 +1,42 @@
+.divstyle{
+    display:flex;
+    justify-content:center;
+    padding: auto
+}
+.completeBtn{
+    color:rgb(241, 250, 241);
+    font-size:2rem ;
+    background-color: rgb(12, 127, 204);
+    width: 3rem;
+    border-radius: 5px;
+    margin:0.5rem;
+}
+
+.deleteBtn{
+    color:rgb(241, 250, 241);
+    font-size:2rem ;
+    background-color: rgb(216, 14, 14);
+    width: 3rem;
+    border-radius: 5px;
+    margin:0.5rem;
+}
+.listi{
+    font-size:1.7rem ;
+    font-family:cursive ;
+    width: 12rem;
+    height:2.7rem;
+    border-width: 1rem;
+    background-color: rgb(175, 161, 139);
+    border-radius: 5px;
+    border-color: rgb(92, 91, 90);
+    margin:0.5rem;
+    padding:0.2rem;
+}
+
+.completed{
+    text-decoration: line-through;
+}
+
+.hide{
+    display:none;
+}

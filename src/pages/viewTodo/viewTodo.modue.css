@@ -1,0 +1,9 @@
+.head-text{
+    color: white;
+    border-radius: 2rem;
+    padding: 2rem; 
+    display: flex;
+    justify-content:center;
+    font-size: 3rem;
+    font-family:sans-serif
+  }

@@ -1,0 +1,23 @@
+.inputs{
+    font-size:1.5rem ;
+    width: 11rem;
+    height:1.9rem;
+    border-radius: 10px;
+    padding: 0.5rem;
+    outline:none
+}
+.divstyle{
+    display:flex;
+    justify-content:center;
+    padding: 0.3rem;
+}
+
+.submitBtn{
+    color:rgb(241, 250, 241);
+    font-size: 1.5rem ;
+    background-color: rgb(12, 127, 204);
+    width: 5rem;
+    border-radius: 5px;
+    margin:0.5rem;
+    padding-left: 0.3rem;
+}

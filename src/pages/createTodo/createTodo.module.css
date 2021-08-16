@@ -1,0 +1,25 @@
+.subButton{
+    background-color: rgb(46, 131, 46);
+    color: rgb(244, 244, 250);
+    font-family:cursive;
+    font-size: 1rem;
+    width:4rem ;
+    height: 3rem ;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: white;
+}
+
+.divstyle{
+    display:flex;
+    justify-content:center;
+    padding: auto;
+}
+
+.divBtn{
+    display:flex;
+    justify-content:center;
+    padding: 2rem;
+    position: relative;
+    bottom:10px;
+}
