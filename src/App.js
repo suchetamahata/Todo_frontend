@@ -9,12 +9,21 @@ import './App.css'
 import CreateTodos from './pages/createTodo';
 import ViewTodos from './pages/viewTodo';
 import ViewUuid from './components/ViewUuid';
+import { useEffect, useState } from 'react';
 
 const App = () => {
+
+const [uname, setUname] = useState('Your')
+
+useEffect(() => { 
+    if(localStorage.getItem('uname') !== null){
+        setUname( localStorage.getItem('uname'))
+    }
+}, [uname])
 return(
    <Router>
        <div>
-            <h1 className='head-text'> Your ToDo List</h1>
+            <h1 className='head-text'>{uname}'s ToDo List</h1>
            <h5 className='wel-text'> What would you like to do today ?</h5>
            <ul className='linkss'>
                <li>
