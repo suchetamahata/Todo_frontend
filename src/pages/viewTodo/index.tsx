@@ -1,6 +1,7 @@
-import { useEffect, useState, FC } from 'react'
+import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
-//import { toast } from 'react-toastify'
+import CachedRoundedIcon from '@material-ui/icons/CachedRounded';
+
 import Todo from '../../components/Todo'
 import '../../App.css'
 import { TodoType } from '../createTodo/index'
@@ -9,14 +10,10 @@ interface param {
     uname: string
 }
 
-interface Prop {
-    children: any
-}
-
 const ViewTodos = () => {
     const params = useParams<param>();
     const [todos, setTodos] = useState<TodoType[]>([])
-    const [length, setLength] = useState<number>(Number)
+    const [length, setLength] = useState<number|undefined>(undefined)
     console.log(params.uname)
 
     useEffect(() => {
@@ -38,11 +35,21 @@ const ViewTodos = () => {
         })()
     }, [length, params.uname])
 
-    if (length === 0) {
-        return (<h3 className='head-text'> Error! something went wrong </h3>)
+    if (length === undefined) {
+        return (<>
+            <h5 className='wel-text'> You are doing great!</h5>
+            <h3 className='head-text'> Loading ... <CachedRoundedIcon className='head-text'/></h3>
+        </>)
     }
+    else if (length === 0) {
+        return (<>
+             <h5 className='wel-text'>  You are doing great!</h5>
+            <h3 className='head-text'> Error! something went wrong </h3>
+        </>)}
     else {
-        return (<>{
+        return (<>
+        <h5 className='wel-text'> You are doing great!</h5>
+        {
             todos.map((todo) => {
                 return (
                     <Todo setTodos={setTodos}
@@ -56,6 +63,7 @@ const ViewTodos = () => {
                 )
             })
         }
+        <h5 className='home-text'> Don't forget to love yourself :) </h5>
         </>)
     }
 }

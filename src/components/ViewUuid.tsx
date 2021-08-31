@@ -9,12 +9,15 @@ function ViewUuid () {
     const [uname,setUname] = useState<string>("")
 
     return(
+        <>
+        <h5 className='wel-text'> View your progress</h5>
         <div className={styles.divstyle}>
             <input value={uname} onChange={(e:React.ChangeEvent<HTMLInputElement>)=>{setUname(e.target.value)}} type='text'
                    className={`${styles.inputs}`} placeholder='enter uname'>    
              </input>
             <Link to={`/view/${uname}`} className={styles.submitBtn}>ok</Link>
         </div>
+        </>
     )
 }
 export default ViewUuid

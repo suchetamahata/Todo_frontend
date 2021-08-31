@@ -7,7 +7,6 @@ import styles from './UserPopup.module.css';
 const UserPopup = () => {
     
 const checkUname=(e: React.ChangeEvent<HTMLInputElement>)=>{
-
 }
 
 return(

@@ -25,7 +25,7 @@ export default function FormDialog() {
   }
 
   return (
-    <div>
+    <div className='wel-text'>
       <Button variant="outlined" color="primary"  onClick={handleClickOpen}>
         Set User Id
       </Button>
@@ -33,7 +33,7 @@ export default function FormDialog() {
         <DialogTitle id="form-dialog-title">Set User Id</DialogTitle>
         <DialogContent>
           <DialogContentText>
-            If you are a new user please set your UserId. This will help verify its you in second login.
+            If you are a new user please set your UserId. You will later use it to view your todos.
           </DialogContentText>
           <TextField
             autoFocus

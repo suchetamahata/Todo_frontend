@@ -9,23 +9,16 @@ import './App.css'
 import CreateTodos from './pages/createTodo';
 import ViewTodos from './pages/viewTodo';
 import ViewUuid from './components/ViewUuid';
-import { useEffect, useState } from 'react';
+import Home from './pages/Home';
 
 const App = () => {
-
-const [uname, setUname] = useState('Your')
-
-useEffect(() => { 
-    if(localStorage.getItem('uname') !== null){
-        setUname( localStorage.getItem('uname')! )
-    }
-}, [uname])
-return(
+return(<>
    <Router>
-       <div>
-            <h1 className='head-text'>{uname}'s ToDo List</h1>
-           <h5 className='wel-text'> What would you like to do today ?</h5>
+       <div>    
            <ul className='linkss'>
+               <li>
+                   <Link to='/' className='cardh'> Home</Link>
+               </li>
                <li>
                    <Link to='create'  className='card'> Create Todos </Link>
                </li>
@@ -35,15 +28,21 @@ return(
            </ul>
        </div>
        <Switch>
-           <Route exact path='/create'>
+           <Route path='/create'>
                <CreateTodos/>
            </Route>
            <Route path='/view/:uname'>
                 <ViewTodos/>
            </Route>
-           <Route path='/view'> <ViewUuid /> </Route>
+           <Route path='/view'> 
+                <ViewUuid /> 
+           </Route>
+           <Route path='/'>
+               <Home/>
+           </Route>
        </Switch>
    </Router>
+   </>
 )
 }
 

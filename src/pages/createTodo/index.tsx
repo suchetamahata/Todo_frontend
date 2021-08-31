@@ -7,17 +7,17 @@ import "react-notification-alert/dist/animate.css";
 import FormDialog from '../../components/materialUiForm';
 import Form from '../../components/Form'
 import TodoList from '../../components/TodoList'
-import React,{useState, useEffect, EventHandler} from 'react'
+import React,{useState, useEffect} from 'react'
 import disp from './createTodo.module.css';
 
 export interface TodoType{
   isCompleted?: boolean,
-  inputText?: string,
+  inputText?: string |undefined,
   uuid?: string,
   uname?: string,
   _id?: string,
   item?: string,
-  id:string
+  id?:string |number,
 }
 // interface Event{
 //   type:string,
@@ -76,7 +76,8 @@ function App() {
 }
 
   return ( 
-  <div >
+  <>
+     <h5 className='wel-text'> List all your work and manage them </h5>
     <div className={disp.divstyle}>
       <Form inputText={inputText} todos={todos} setTodos={setTodos} 
             setInputText={setInputText} setStatus={setStatus} ></Form>
@@ -87,9 +88,8 @@ function App() {
      <div className={disp.divBtn}> 
        <button onClick={submitToDataBase} type='submit' className={disp.subButton} >Save 
        <AiOutlineSave/></button>
-       <FormDialog></FormDialog>
       </div>
-  </div>
+  </>
   );
 }
 

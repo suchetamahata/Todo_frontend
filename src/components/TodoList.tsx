@@ -2,7 +2,13 @@ import React from 'react'
 import Todo from './Todo'
 import {TodoType} from '../pages/createTodo/index'
 
-const TodoList = ({ todos, setTodos, filterTodos }:any) =>{
+interface Todolist{
+    todos: TodoType[],
+    setTodos:(b: TodoType[]) => void,
+    filterTodos: TodoType[]
+}
+
+const TodoList = ({ todos, setTodos, filterTodos }:Todolist) =>{
     return(
         <div className="todo-container">
         <ul className="todo-list">

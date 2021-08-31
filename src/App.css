@@ -1,5 +1,14 @@
 .wel-text{
-  color: rgb(78, 76, 76);
+  color:lightskyblue;
+  border-radius: 2rem;
+  padding: 0rem; 
+  display: flex;
+  justify-content:center;
+  font-size: 1.5rem;
+  font-family:sans-serif
+}
+.home-text{
+  color:midnightblue;
   border-radius: 2rem;
   padding: 0rem; 
   display: flex;
@@ -25,6 +34,14 @@
   list-style-type: none;
 }
 
+.cardh{
+  color:rgb(240, 242, 247);
+  margin-right: 20px;
+  position: fixed;
+  top: 7rem;
+  left: 2rem;
+  font-size:1.5rem;
+}
 .card{
   color: white;
   margin-right: 20px;
@@ -36,9 +53,9 @@
 
 .cardv{
   color: white;
-  margin-left: 20px;
+  margin-right: 20px;
   position: fixed;
-  top: 1rem;
-  right: 2rem;
+  top: 4rem;
+  left: 2rem;
   font-size:1.5rem;
 }
